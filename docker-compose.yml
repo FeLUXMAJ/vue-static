@@ -1,0 +1,14 @@
+version: '2'
+services:
+  web:
+    container_name: web
+    image: nginx:1.13.12-alpine
+    volumes:
+      - ./mysite.template:/etc/nginx/conf.d/mysite.template
+      - ./src:/usr/share/nginx/html:ro
+    ports:
+      - '8080:80'
+    environment:
+      - NGINX_PORT=80
+      - NGINX_ROOT=/usr/share/nginx/html
+    command: /bin/sh -c "envsubst < /etc/nginx/conf.d/mysite.template > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"
