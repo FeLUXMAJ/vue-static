@@ -1,0 +1,2 @@
+# vue-static
+vue-static
