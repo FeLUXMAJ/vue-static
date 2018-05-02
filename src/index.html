@@ -4,8 +4,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Vue Static</title>
+    <link rel="shortcut icon" href="./app/assets/logo.png">
+    <link href="./lib/github.com/vuejs/ui/0.2.5/vue-ui.css" rel="stylesheet">
   </head>
   <body>
-    <p>Hello World!</p>
+    <div id="app"></div>
+    <script src="./lib/github.com/systemjs/systemjs/0.21.3/system.js"></script>
+    <script src="./lib/github.com/vuejs/ui/0.2.5/vue-ui.min.js"></script>
+    <script src="./config/system-config.js"> </script>
+    <script>
+      System.import('./app/index.js').catch(function(err) { console.error(err); });
+    </script>
   </body>
 </html>
