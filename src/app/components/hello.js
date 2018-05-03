@@ -2,9 +2,6 @@
 import template from './hello.html!text'
 // </template>
 
-import Vue from 'vue'
-import { mapGetters } from 'vuex'
-
 export default {
   template,
   data () {

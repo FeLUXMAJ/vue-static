@@ -1,0 +1,38 @@
+.main {
+  height: 100%;
+  width: 100%;
+}
+
+.main .top-container {
+  background-color: #333333;
+  height: 50px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.main .center-container {
+  height: calc(100% - 100px);
+  width: 100%;
+}
+
+.main .center-container .left-container {
+  background-color: #444444;
+  color: #FFFFFF;
+  height: inherit;
+  position: fixed;
+  width: 200px;
+}
+
+.main .center-container .content-container {
+  background-color: #FFFFFF;
+  height: 100%;
+  margin-left: 200px;
+}
+
+.main .footer-container {
+  background-color: #F2F2F2;
+  height: 50px;
+  overflow: hidden;
+  width: 100%;
+}
+

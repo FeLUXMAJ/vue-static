@@ -1,0 +1,9 @@
+<div class="login">
+  <form @submit.prevent="login">
+    <label><input required v-model="email" type="text" placeholder="email"/></label>
+    <label><input required v-model="password" type="password" placeholder="password"/></label>
+    <button type="submit">Login</button>
+    <span class="error">{{ errormsg }}</span>
+  </form>
+</div>
+

@@ -1,9 +1,18 @@
-import Hello from './components/hello'
+// <template>
+import template from './main.html!text'
+// </template>
+
+import TopBar from './components/top-bar'
 
 export default {
   name: 'Main',
-  template: '<hello/>',
+  template,
   components: {
-    Hello
+    TopBar
   }
 }
+
+// <style>
+import './main.css!css'
+// </style>
+
