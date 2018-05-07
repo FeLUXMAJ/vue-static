@@ -46,7 +46,8 @@ const actions = {
 }
 
 const mutations = {
-  'auth-success': function (state, {token, user}) {
+  'auth-success': function (state, data) {
+    const { token, user } = data
     if (token && user) {
       state.token = token
       state.userid = user

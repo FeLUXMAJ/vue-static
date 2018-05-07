@@ -4,6 +4,7 @@ import template from './page-not-found.html!text'
 
 export default {
   template,
+  name: 'PageNotFound',
   date () {
     return {
     }

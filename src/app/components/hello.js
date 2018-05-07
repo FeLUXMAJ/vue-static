@@ -4,6 +4,7 @@ import template from './hello.html!text'
 
 export default {
   template,
+  name: 'Hello',
   data () {
     return {
     }

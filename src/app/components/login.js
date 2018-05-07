@@ -4,6 +4,7 @@ import template from './login.html!text'
 
 export default {
   template,
+  name: 'Login',
   data () {
     return {
       email: 'admin',
