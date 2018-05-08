@@ -1,0 +1,19 @@
+.side-bar {
+  height: 100%;
+}
+
+.side-bar a {
+  color: #ffffff !important;
+  text-decoration: none !important;
+}
+
+.side-bar .nav-link {
+  display: block;
+  padding: 10px;
+}
+
+.side-bar .nav-link:hover {
+  background-color: #999999;
+  color: #ffffff;
+}
+

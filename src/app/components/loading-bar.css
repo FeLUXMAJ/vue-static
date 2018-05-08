@@ -1,3 +1,11 @@
 .loading-bar .md-progress-bar-fill {
   background-color: green;
 }
+
+.loading-bar .md-progress-bar-track {
+  background-color: yellowgreen;
+}
+
+.loading-bar .md-progress-bar-buffer {
+  border-top-color: green !important;
+}

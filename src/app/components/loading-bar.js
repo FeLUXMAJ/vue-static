@@ -10,6 +10,12 @@ export default {
     }
   },
   computed: {
+    value () {
+      return this.$store.state.progress.value
+    },
+    buffer () {
+      return this.$store.state.progress.buffer
+    }
   },
 }
 // <style>

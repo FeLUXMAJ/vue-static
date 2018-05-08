@@ -1,0 +1,7 @@
+.date-time-picker {
+  width: 240px;
+}
+
+.date-time-picker input {
+  width: inherit;
+}

@@ -1,0 +1,8 @@
+<div class="side-bar">
+  <div class="list" v-if="loggedIn">
+    <router-link class="nav-link"
+      v-for="(r, i) of rs"
+      :key="i"
+      :to="{path: r}">{{ r }}</router-link>
+  </div>
+</div>

@@ -1,0 +1,76 @@
+.date-time-picker-popover {
+  border-color: #e5e5e5;
+  border-style: solid;
+  border-width: 1px;
+  margin: 5px;
+  padding: 5px;
+}
+
+.date-time-picker-popover div {
+  text-align: center;
+  user-select: none;
+}
+
+.date-time-picker-popover .top,
+.date-time-picker-popover .bottom {
+  height: auto;
+  width: inherit;
+}
+
+.date-time-picker-popover .top > div {
+  display: inline-block;
+  padding: 0.1px 3px;
+}
+
+.date-time-picker-popover .center {
+  height: auto;
+  width: inherit;
+}
+
+.date-time-picker-popover .center .select-year > div,
+.date-time-picker-popover .center .select-month > div,
+.date-time-picker-popover .center .select-date > div,
+.date-time-picker-popover .center .select-hour > div,
+.date-time-picker-popover .center .select-minute > div,
+.date-time-picker-popover .center .select-second > div {
+  height: 25px;
+}
+
+.date-time-picker-popover .center .select-year > div .year,
+.date-time-picker-popover .center .select-month > div .month {
+  display: inline-block;
+  width: 25%;
+}
+
+.date-time-picker-popover .center .select-date > div .week-day-title,
+.date-time-picker-popover .center .select-date > div .week-day {
+  display: inline-block;
+  width: 14%;
+}
+
+.date-time-picker-popover .center .select-hour > div .hour,
+.date-time-picker-popover .center .select-minute > div .minute,
+.date-time-picker-popover .center .select-second > div .second {
+  display: inline-block;
+  width: 16%;
+}
+
+.date-time-picker-popover .top .select-year:hover,
+.date-time-picker-popover .top .select-month:hover,
+.date-time-picker-popover .center .select-year .year:hover,
+.date-time-picker-popover .center .select-month .month:hover,
+.date-time-picker-popover .center .select-date .week-day:hover,
+.date-time-picker-popover .center .select-hour .hour:hover,
+.date-time-picker-popover .center .select-minute .minute:hover,
+.date-time-picker-popover .center .select-second .second:hover,
+.date-time-picker-popover .bottom .select-time .hour:hover,
+.date-time-picker-popover .bottom .select-time .minute:hover,
+.date-time-picker-popover .bottom .select-time .second:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.date-time-picker-popover .bottom .select-time > div {
+  display: inline;
+  padding: 0.1px 3px;
+}
+

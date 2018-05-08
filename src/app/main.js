@@ -3,6 +3,7 @@ import template from './main.html!text'
 // </template>
 
 import TopBar from './components/top-bar'
+import SideBar from './components/side-bar'
 import LoadingBar from './components/loading-bar'
 
 export default {
@@ -10,6 +11,7 @@ export default {
   template,
   components: {
     TopBar,
+    SideBar,
     LoadingBar,
   }
 }

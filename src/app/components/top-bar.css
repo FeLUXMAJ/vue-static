@@ -13,25 +13,14 @@
   height: inherit;
 }
 
-.top-bar .float-left,
-.top-bar .float-left > div {
-  float: left;
-}
-
-.top-bar .float-right,
-.top-bar .float-right div {
-  float: right;
-}
-
-.top-bar .float-left,
-.top-bar .float-right {
+.top-bar > div {
   height: inherit;
 }
 
-.top-bar .float-left > div,
-.top-bar .float-right > div {
+.top-bar > div > div {
   height: inherit;
-  padding: 14px 16px;
+  line-height: 30px;
+  padding: 10px;
   text-align: center;
   user-select: none;
   vertical-align: middle;

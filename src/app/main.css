@@ -27,6 +27,7 @@
   background-color: #FFFFFF;
   height: 100%;
   margin-left: 200px;
+  overflow: scroll;
 }
 
 .main .footer-container {

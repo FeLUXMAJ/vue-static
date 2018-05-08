@@ -1,0 +1,75 @@
+<div class="date-time-picker-popover">
+  <div class="top" v-if="mode !== 'time'">
+    <div class="select-year" v-if="top" @click="selectYear">{{ value.getFullYear() }}</div>
+    <div class="select-month" v-if="top === 'year-month'" @click="selectMonth">{{ months[value.getMonth()] }}</div>
+  </div>
+  <hr v-if="top && center"/>
+  <div class="center">
+    <div class="select-year" v-if="center === 'year'">
+      <div v-for="i in 3" :key="i">
+        <div class="year"
+          v-for="j in 4"
+          :key="j"
+          @click="selectedYear">{{parseInt(value.getFullYear()/10)*10+(i-1)*4+j-1}}</div>
+      </div>
+    </div>
+    <div class="select-month" v-if="center === 'month'">
+      <div v-for="i in 3" :key="i">
+        <div class="month"
+          v-for="j in 4"
+          :key="j"
+          @click="selectedMonth">{{months[(i-1)*4+j-1]}}</div>
+      </div>
+    </div>
+    <div class="select-date" v-else-if="center === 'date'">
+      <div>
+        <div class="week-day-title"
+          v-for="d in days"
+          :key="d">{{d}}</div>
+      </div>
+      <div
+        v-for="i of weeks"
+        :key="i">
+        <div class="week-day"
+          v-for="j in 7"
+          :key="j"
+          @click="selectedDate">{{i*7+j}}</div>
+      </div>
+    </div>
+    <div class="select-hour" v-else-if="center === 'hour'">
+      <div v-for="i in 4" :key="i">
+        <div class="hour"
+          v-for="j in 6"
+          :key="j"
+          @click="selectedHour">{{(i-1)*6+j-1}}</div>
+      </div>
+    </div>
+    <div class="select-minute" v-else-if="center === 'minute'">
+      <div v-for="i in 10" :key="i">
+        <div class="minute"
+          v-for="j in 6"
+          :key="j"
+          @click="selectedMinute">{{(i-1)*6+j-1}}</div>
+      </div>
+    </div>
+    <div class="select-second" v-else-if="center === 'second'">
+      <div v-for="i in 10" :key="i">
+        <div class="second"
+          v-for="j in 6"
+          :key="j"
+          @click="selectedSecond">{{(i-1)*6+j-1}}</div>
+      </div>
+    </div>
+  </div>
+  <hr v-if="center && bottom"/>
+  <div class="bottom">
+    <div class="select-time" v-if="bottom">
+      <div class="hour" @click="selectHour">{{ ('0' + value.getHours()).slice(-2) }}</div>
+      <span>:</span>
+      <div class="minute" @click="selectMinute">{{ ('0' + value.getMinutes()).slice(-2) }}</div>
+      <span>:</span>
+      <div class="second" @click="selectSecond">{{ ('0' + value.getSeconds()).slice(-2) }}</div>
+    </div>
+  </div>
+</div>
+
