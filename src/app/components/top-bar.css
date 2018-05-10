@@ -26,4 +26,11 @@
   vertical-align: middle;
 }
 
+.top-bar .md-button {
+  color: #ffffff
+}
+
+.top-bar .md-button:hover {
+  background-color: #a9a9a9
+}
 

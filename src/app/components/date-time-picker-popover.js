@@ -26,7 +26,7 @@ export default {
   },
   computed: {
     lang: function () {
-      return 'cn'
+      return this.$store.state.preference.locale
     },
     days: function () {
       return this.$i18n ? this.$i18n.t('days', this.lang).split(',') : Array.from({ length: 7 }).map((_, i) => i + 1)

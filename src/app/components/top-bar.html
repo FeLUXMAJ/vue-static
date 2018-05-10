@@ -1,8 +1,9 @@
 <div class="top-bar md-layout md-alignment-center-space-between">
   <div class="md-layout md-alignment-center-left">
-    <div class="title">Top Bar</div>
+    <md-button class="md-icon-button" :href="'https://github.com/moyummy/vue-static'"><img src="https://github.com/fluidicon.png"/></md-button>
   </div>
   <div class="md-layout md-alignment-center-right">
-    <div class="logout" v-if="loggedIn" @click="logout">Log out</div>
+    <md-button @click="changeLocale">{{ locale }}</md-button>
+    <md-button v-if="loggedIn" @click="logout">{{ $t('logout', locale) }}</md-button>
   </div>
 </div>

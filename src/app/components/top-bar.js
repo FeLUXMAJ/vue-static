@@ -12,10 +12,13 @@ export default {
   computed: {
     loggedIn () {
       return this.$store.getters.loggedIn
+    },
+    locale () {
+      return this.$store.state.preference.locale
     }
   },
   methods: {
-    logout: function () {
+    logout () {
       this.$store.dispatch('auth-logout', { })
         .then(() => {
           this.$router.push({
@@ -23,6 +26,9 @@ export default {
             query: {redirect: this.$route.path}
           })
         })
+    },
+    changeLocale (event) {
+      this.$store.dispatch('preference-locale-change')
     }
   }
 }
