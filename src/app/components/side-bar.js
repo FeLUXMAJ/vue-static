@@ -16,7 +16,7 @@ export default {
     rs () {
       return this.$router.options.routes
         .map(r => r.path)
-        .filter(r => r !== '*')
+        .sort((r1, r2) => r1 > r2)
     }
   }
 }

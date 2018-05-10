@@ -1,7 +1,24 @@
 .date-time-picker {
-  width: 240px;
+  width: 280px;
 }
 
-.date-time-picker input {
-  width: inherit;
+.date-time-picker form input {
+  background-color: #f4f9f9;
+  display: inline-block;
+  font-size: 14px;
+  height: 30px;
+  line-height: 14px;
+  position: relative;
+  text-align: center;
+  width: 90%;
+}
+
+.date-time-picker form button {
+  background-color: transparent;
+  border: transparent;
+  display: inline-block;
+  position: relative;
+  right: 30px;
+  vertical-align: middle;
+  width: 0.1px;
 }

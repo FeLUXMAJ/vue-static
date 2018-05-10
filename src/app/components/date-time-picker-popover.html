@@ -1,75 +1,97 @@
 <div class="date-time-picker-popover">
-  <div class="top" v-if="mode !== 'time'">
-    <div class="select-year" v-if="top" @click="selectYear">{{ value.getFullYear() }}</div>
-    <div class="select-month" v-if="top === 'year-month'" @click="selectMonth">{{ months[value.getMonth()] }}</div>
+  <div class="top">
+    <div class="select-decade" v-if="top ==='decade'">
+      <div class="previous cell" @click="updateDecade(-10)">&#60;</div>
+      <div class="cell" @click="selectYear">{{ value.getFullYear() }}</div>
+      <div class="next cell" @click="updateDecade(10)">&#62;</div>
+    </div>
+    <div class="select-year cell" v-else-if="top === 'year'" @click="selectYear">{{ value.getFullYear() }}</div>
+    <div class="select-year-month" v-if="top === 'year-month' || top === 'year-month-only'">
+      <div class="cell" v-if="top !== 'year-month-only'" @click="updateMonth(-1)">&#60;</div>
+      <div class="cell" @click="selectYear">{{ year }}</div>
+      <div class="cell" @click="selectMonth">{{ months[month] }}</div>
+      <div class="cell" v-if="top !== 'year-month-only'" @click="updateMonth(1)">&#62;</div>
+    </div>
   </div>
+
   <hr v-if="top && center"/>
+
   <div class="center">
     <div class="select-year" v-if="center === 'year'">
-      <div v-for="i in 3" :key="i">
-        <div class="year"
+      <div class="row" v-for="i in 3" :key="i">
+        <div class="year cell"
           v-for="j in 4"
           :key="j"
-          @click="selectedYear">{{parseInt(value.getFullYear()/10)*10+(i-1)*4+j-1}}</div>
+          :class="{selected: Math.floor(year/10)*10+(i-1)*4+j-2 === value.getFullYear()}"
+          @click="selectedYear">{{Math.floor(year/10)*10+(i-1)*4+j-2}}</div>
       </div>
     </div>
     <div class="select-month" v-if="center === 'month'">
-      <div v-for="i in 3" :key="i">
-        <div class="month"
+      <div class="row" v-for="i in 3" :key="i">
+        <div class="month cell"
           v-for="j in 4"
           :key="j"
+          :class="{selected: (i-1)*4+j-1 === value.getMonth()}"
           @click="selectedMonth">{{months[(i-1)*4+j-1]}}</div>
       </div>
     </div>
     <div class="select-date" v-else-if="center === 'date'">
-      <div>
-        <div class="week-day-title"
+      <div class="row">
+        <div class="week-day-title cell"
           v-for="d in days"
           :key="d">{{d}}</div>
       </div>
-      <div
+      <div class="row"
         v-for="i of weeks"
         :key="i">
-        <div class="week-day"
+        <div class="week-day cell"
           v-for="j in 7"
           :key="j"
-          @click="selectedDate">{{i*7+j}}</div>
+          :index="(dates[(i-1)*7+j-1]||{}).index"
+          :class="{'current-month':dates[(i-1)*7+j-1] && dates[(i-1)*7+j-1].currentMonth}"
+          @click="selectedDate">{{(dates[(i-1)*7+j-1]||{}).date}}</div>
       </div>
     </div>
     <div class="select-hour" v-else-if="center === 'hour'">
-      <div v-for="i in 4" :key="i">
-        <div class="hour"
+      <div class="row" v-for="i in 4" :key="i">
+        <div class="hour cell"
           v-for="j in 6"
           :key="j"
+          :class="{selected: (i-1)*6+j-1 === value.getHours()}"
           @click="selectedHour">{{(i-1)*6+j-1}}</div>
       </div>
     </div>
     <div class="select-minute" v-else-if="center === 'minute'">
-      <div v-for="i in 10" :key="i">
-        <div class="minute"
+      <div class="row" v-for="i in 10" :key="i">
+        <div class="minute cell"
           v-for="j in 6"
           :key="j"
+          :class="{selected: (i-1)*6+j-1 === value.getMinutes()}"
           @click="selectedMinute">{{(i-1)*6+j-1}}</div>
       </div>
     </div>
     <div class="select-second" v-else-if="center === 'second'">
-      <div v-for="i in 10" :key="i">
-        <div class="second"
+      <div class="row" v-for="i in 10" :key="i">
+        <div class="second cell"
           v-for="j in 6"
           :key="j"
+          :class="{selected: (i-1)*6+j-1 === value.getSeconds()}"
           @click="selectedSecond">{{(i-1)*6+j-1}}</div>
       </div>
     </div>
   </div>
+
   <hr v-if="center && bottom"/>
+
   <div class="bottom">
     <div class="select-time" v-if="bottom">
-      <div class="hour" @click="selectHour">{{ ('0' + value.getHours()).slice(-2) }}</div>
-      <span>:</span>
-      <div class="minute" @click="selectMinute">{{ ('0' + value.getMinutes()).slice(-2) }}</div>
-      <span>:</span>
-      <div class="second" @click="selectSecond">{{ ('0' + value.getSeconds()).slice(-2) }}</div>
+      <div class="select-time">
+        <div class="hour cell" @click="selectHour">{{ ('0' + value.getHours()).slice(-2) }}</div>
+        <span>:</span>
+        <div class="minute cell" @click="selectMinute">{{ ('0' + value.getMinutes()).slice(-2) }}</div>
+        <span>:</span>
+        <div class="second cell" @click="selectSecond">{{ ('0' + value.getSeconds()).slice(-2) }}</div>
+      </div>
     </div>
   </div>
 </div>
-

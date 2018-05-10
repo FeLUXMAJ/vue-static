@@ -1,8 +1,9 @@
 <div class="date-time-picker">
-  <input readonly :value="text" @click="popover"/>
-  <date-time-picker-popover :mode="'year'" :value="value" @input="update"/>
-  <date-time-picker-popover :mode="'year-month'" :value="value" @input="update"/>
-  <date-time-picker-popover :mode="'date'" :value="value" @input="update"/>
-  <date-time-picker-popover :mode="'datetime'" :value="value" @input="update"/>
-  <date-time-picker-popover :mode="'time'" :value="value" @input="update"/>
+  <form>
+    <input readonly :value="text" @click="popover" @change="reset"/>
+    <button type="reset" v-show="value !== undefined">X</button>
+  </form>
+  <div v-if="show">
+    <date-time-picker-popover :mode="mode" :value="value" @input="update"/>
+  </div>
 </div>

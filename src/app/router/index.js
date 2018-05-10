@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import store from '../store'
 import PageNotFound from '../components/page-not-found'
-import DateTimePicker from '../components/date-time-picker'
+import DateTimePickerDemo from '../components/date-time-picker-demo'
 import Login from '../components/login'
 import Hello from '../components/hello'
 
@@ -41,8 +41,8 @@ const routes = [
     redirect: '/home',
   },
   {
-    path: '/date-time-picker',
-    component: DateTimePicker,
+    path: '/date-time-picker-demo',
+    component: DateTimePickerDemo,
   },
   {
     path: '/page-not-found',
