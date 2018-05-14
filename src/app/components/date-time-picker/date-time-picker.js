@@ -3,7 +3,7 @@ import template from './date-time-picker.html!text'
 // </template>
 
 import DateTimePickerPopover from './date-time-picker-popover'
-import * as utils from '../utils/utils'
+import * as utils from '../../utils/utils'
 
 export default {
   template,
