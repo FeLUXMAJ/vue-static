@@ -2,6 +2,7 @@
 import template from './side-bar.html!text'
 // </template>
 
+// <script>
 export default {
   template,
   name: 'SideBar',
@@ -20,6 +21,7 @@ export default {
     }
   }
 }
+// </script>
 
 // <style>
 import './side-bar.css!css'

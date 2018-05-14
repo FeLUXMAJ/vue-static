@@ -2,6 +2,7 @@
 import template from './login.html!text'
 // </template>
 
+// <script>
 export default {
   template,
   name: 'Login',
@@ -28,3 +29,5 @@ export default {
     }
   }
 }
+// </script>
+

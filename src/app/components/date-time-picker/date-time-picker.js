@@ -2,6 +2,7 @@
 import template from './date-time-picker.html!text'
 // </template>
 
+// <script>
 import DateTimePickerPopover from './date-time-picker-popover'
 import * as utils from '../../utils/utils'
 
@@ -72,6 +73,7 @@ export default {
     this.$el.getElementsByTagName('form')[0].removeEventListener('reset', this.reset, true)
   }
 }
+// </script>
 
 // <style>
 import './date-time-picker.css!css'

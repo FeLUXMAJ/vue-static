@@ -2,6 +2,7 @@
 import template from './hello.html!text'
 // </template>
 
+// <script>
 export default {
   template,
   name: 'Hello',
@@ -15,6 +16,7 @@ export default {
     }
   }
 }
+// </script>
 
 // <style>
 import './hello.css!css'

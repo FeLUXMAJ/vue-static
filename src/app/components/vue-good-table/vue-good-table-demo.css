@@ -1,0 +1,17 @@
+.vue-good-table-demo {
+  height: 100%;
+  width: 100%;
+}
+
+.vue-good-table-demo > .vgt {
+  width: 100%;
+}
+
+.vue-good-table-demo table .table-row,
+.vue-good-table-demo table .table-cell {
+  height: 15px;
+  padding: 0px 8px;
+  text-align: center;
+  white-space: nowrap;
+}
+

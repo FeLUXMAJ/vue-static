@@ -2,6 +2,7 @@
 import template from './loading-bar.html!text'
 // </template>
 
+// <script>
 export default {
   template,
   name: 'LoadingBar',
@@ -18,6 +19,8 @@ export default {
     }
   },
 }
+// </script>
+
 // <style>
 import './loading-bar.css!css'
 // </style>

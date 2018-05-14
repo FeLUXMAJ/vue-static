@@ -2,6 +2,7 @@
 import template from './page-not-found.html!text'
 // </template>
 
+// <script>
 export default {
   template,
   name: 'PageNotFound',
@@ -10,6 +11,7 @@ export default {
     }
   }
 }
+// </script>
 
 // <style>
 import './page-not-found.css!css'

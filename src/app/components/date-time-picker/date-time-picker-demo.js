@@ -2,6 +2,7 @@
 import template from './date-time-picker-demo.html!text'
 // </template>
 
+// <script>
 import DateTimePicker from './date-time-picker'
 export default {
   template,
@@ -20,6 +21,7 @@ export default {
     }
   }
 }
+// </script>
 
 // <style>
 import './date-time-picker-demo.css!css'

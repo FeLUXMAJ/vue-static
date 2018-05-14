@@ -2,6 +2,7 @@
 import template from './top-bar.html!text'
 // </template>
 
+// <script>
 export default {
   template,
   name: 'TopBar',
@@ -32,6 +33,7 @@ export default {
     }
   }
 }
+// </script>
 
 // <style>
 import './top-bar.css!css'

@@ -1,0 +1,26 @@
+<div class="vue-good-table-demo">
+    <md-switch v-model="isFlat" @change="table = []">isFlat: {{isFlat}}</md-switch>
+  <md-button @click="loadData">Load</md-button>
+  <div class="vgt flat" v-if="isFlat">
+    <div>Flat</div>
+    <vue-good-table
+      :columns="flatColumns"
+      :rows="flatResult"
+      :rowStyleClass="'table-row'"
+      :search-options="{ enabled: true}"
+      :lineNumbers="true"
+      :pagination-options="{ enabled: true, position: 'both', perPage: 10 }">
+    </vue-good-table>
+  </div>
+  <div class="vgt not-flat" v-else>
+    <div>Not Flat</div>
+    <vue-good-table
+      :columns="columns"
+      :rows="result"
+      :rowStyleClass="'table-row'"
+      :search-options="{ enabled: true}"
+      :lineNumbers="true"
+      :pagination-options="{ enabled: true, position: 'both', perPage: 10 }">
+    </vue-good-table>
+  </div>
+</div>

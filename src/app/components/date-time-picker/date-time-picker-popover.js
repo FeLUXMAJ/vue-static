@@ -2,6 +2,7 @@
 import template from './date-time-picker-popover.html!text'
 // </template>
 
+// <script>
 export default {
   template,
   name: 'DateTimePickerPopover',
@@ -192,6 +193,7 @@ export default {
     this.reset()
   }
 }
+// </script>
 
 // <style>
 import './date-time-picker-popover.css!css'
