@@ -26,3 +26,12 @@ export function apiGet(url) {
   })
 }
 
+export function getFunctionName(depth = 2) {
+  try {
+    undefined.a = 0
+    return ''
+  } catch (err) {
+    return (err.stack.split(/\s+at\s+/)[depth] || '').replace(/\s*\([^\(\)]*\)\s*$/, '')
+  }
+}
+

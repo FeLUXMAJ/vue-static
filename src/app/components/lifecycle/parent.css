@@ -1,0 +1,11 @@
+.parent {
+  align-items: center;
+  background: white;
+  border: solid 2px black;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 150px;
+  width: 150px;
+}

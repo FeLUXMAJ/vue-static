@@ -4,6 +4,7 @@ import store from '../store'
 import PageNotFound from '../components/page-not-found'
 import DateTimePickerDemo from '../components/date-time-picker/date-time-picker-demo'
 import VueGoodTableDemo from '../components/vue-good-table/vue-good-table-demo'
+import LifecycleDemo from '../components/lifecycle/parent'
 import Login from '../components/login'
 import Hello from '../components/hello'
 
@@ -44,6 +45,10 @@ const routes = [
   {
     path: '/date-time-picker-demo',
     component: DateTimePickerDemo,
+  },
+  {
+    path: '/lifecycle-demo',
+    component: LifecycleDemo,
   },
   {
     path: '/vue-good-table-demo',
