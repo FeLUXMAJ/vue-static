@@ -11,6 +11,9 @@ new Vue({
   router,
   store,
   template: '<Main/>',
-  components: { Main }
+  components: { Main },
+  mounted: function () {
+    document.getElementById('load').style.display = 'none'
+  }
 })
 
