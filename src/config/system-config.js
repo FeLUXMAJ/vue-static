@@ -8,7 +8,7 @@ System.config({
     'moment': 'lib/unpkg.com/moment@2.22.1/moment.js',
     'text': 'lib/unpkg.com/systemjs-plugin-text@0.0.11/text.js',
     'tiny-cookie': 'lib/unpkg.com/tiny-cookie@2.1.2/lib/index.js',
-    'vue': (localStorage.getItem('vue-static') && localStorage.getItem('vue-static').debug) ? 'lib/unpkg.com/vue@2.5.16/dist/vue.js' : 'lib/unpkg.com/vue@2.5.16/dist/vue.min.js',
+    'vue': (localStorage.getItem('vue-static') && JSON.parse(localStorage.getItem('vue-static')).debug) ? 'lib/unpkg.com/vue@2.5.16/dist/vue.js' : 'lib/unpkg.com/vue@2.5.16/dist/vue.min.js',
     'vue-good-table': 'lib/unpkg.com/vue-good-table@2.4.8/dist/vue-good-table.min.js',
     'vue-i18n': 'lib/unpkg.com/vue-i18n@7.6.0/dist/vue-i18n.min.js',
     'vue-material': 'lib/unpkg.com/vue-material@1.0.0-beta-8/dist/vue-material.min.js',
