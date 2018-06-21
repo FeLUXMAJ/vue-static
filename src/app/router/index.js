@@ -5,6 +5,7 @@ import PageNotFound from '../components/page-not-found'
 import DateTimePickerDemo from '../components/date-time-picker/date-time-picker-demo'
 import VueGoodTableDemo from '../components/vue-good-table/vue-good-table-demo'
 import LifecycleDemo from '../components/lifecycle/parent'
+import LazyDemo from '../components/lazy/parent'
 import Login from '../components/login'
 import Hello from '../components/hello'
 
@@ -49,6 +50,10 @@ const routes = [
   {
     path: '/lifecycle-demo',
     component: LifecycleDemo,
+  },
+  {
+    path: '/lazy-demo',
+    component: LazyDemo,
   },
   {
     path: '/vue-good-table-demo',
